@@ -1,0 +1,120 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Default body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    height: 100vh;
+}
+
+/* Itinerary page background */
+body.itinerary-page {
+    background-image: url('D:/5 SEM LAB/full stack project/travel-planning-app/public/images/itinerary.jpg'); /* Replace with your image path */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Home page background and gradient animation */
+body.home-page {
+    /* Replace with your home image path */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Main container */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form container styling */
+.itinerary-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(249, 249, 249, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Form group with label and input alignment */
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+    width: 40%; /* Adjusts the width of the label */
+    text-align: left;
+}
+
+input, select {
+    width: 55%; /* Adjusts the width of the input to fill remaining space */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Bubble styling */
+.bubble {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 123, 255, 0.5);
+    border-radius: 50%;
+    opacity: 0.6;
+    width: 30px;
+    height: 30px;
+    animation: rise 10s linear forwards;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100px) translateY(-800px);
+        opacity: 0;
+    }
+}
